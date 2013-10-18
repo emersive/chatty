@@ -11,3 +11,6 @@ angular.module('Chatty').directive('ngEnter', function() {
         });
     };
 });
+
+
+//ng-enter
