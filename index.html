@@ -17,7 +17,7 @@
 		<div class="container">
 			<h2>Chatty - <span class="em">"Chat it up!"</span></h2>
 			<div class="messages" >
-				<div class="chat" ng-repeat="chat in messages"></div>
+				<div class="chat" ng-repeat="chat in $scope.messages">{{chat}}</div>
 			</div>
 			<div class="input">
 				<input type="text" autofocus ng-model='messages' ngEnter='addMessage()'/>

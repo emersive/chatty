@@ -11,12 +11,21 @@ $http.post('http://localhost:8001',{'chat':$scope.messages}).success(function(re
 	console.log($scope.messages);
 });
 
-function addMessage(
+
+//add to scope
+function addMessage($scope){
 	$http.post('http://localhost:8001',{'chat':$scope.messages}).success(function(response){
 	$scope.messages = response;
 	console.log($scope.messages);
+	$setPristine();
+
+	$http.get('http://localhost:8001').success(function(response){
+		$scope.messages = response;
+		console.log($scope.messages);
 	});
-);
+
+	});
+};
 
 });
 
